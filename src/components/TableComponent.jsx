@@ -39,7 +39,7 @@ const TableComponent = ({ complaints = [] }) => {
           </Button>
         </div>
       </div>
-      <div className="overflow-x-auto rounded-b-lg border border-[#EAECF0]">
+      <div className="w-full overflow-x-auto rounded-b-lg border border-[#EAECF0]">
         <table className="min-w-full table-auto border-collapse">
           <thead>
             <tr className="border-b border-[#EAECF0]">

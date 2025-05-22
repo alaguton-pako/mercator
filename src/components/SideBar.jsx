@@ -204,7 +204,7 @@ export function Sidebar() {
             className={({ isActive }) =>
               `flex items-center p-3 rounded-lg ${
                 isActive
-                  ? "bg-[#E4F0FF] text-[#002F6C]"
+                  ? "bg-[#E4F0FF] text-[#002F6C] font-bold"
                   : "text-[#DEDEDF] hover:text-[#014DAF] hover:bg-[#AEBAC9]"
               }`
             }
@@ -212,7 +212,7 @@ export function Sidebar() {
             <div className="mr-3">
               <Icons.LogOut />
             </div>
-            <span className="font-medium text-sm">Logout</span>
+            <span className="text-sm font-bold">Logout</span>
           </NavLink>
         </div>
 

@@ -5,7 +5,11 @@ module.exports = withMT({
   content: ["./index.html", "./src//*.{js,ts,jsx,tsx}"],
 
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        satoshi: ["Satoshi", "system-ui", "sans-serif"],
+      },
+    },
   },
   plugins: [],
-}); 
+});

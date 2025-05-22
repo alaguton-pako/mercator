@@ -30,7 +30,7 @@ const ComplaintDetail = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="space-y-1">
             <label className="block text-sm font-medium text-[#344054]">
-              Category
+              Complaints Category
             </label>
             <p className="w-4/5 text-sm text-[#475467] bg-[#F9FAFB] p-2 rounded border border-[#EAECF0]">
               Card Dispute
