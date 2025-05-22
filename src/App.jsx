@@ -13,7 +13,6 @@ function App() {
 
       {/* Admin layout with nested dashboard */}
       <Route element={<AdminLayout />}>
-        <Route path="dashboard" element={<Dashboard />} />
         <Route path="complaint-log" element={<ComplaintLog />} />
         <Route path="complaint-resolve" element={<ComplaintLog />} />
         <Route path="/complaint-log/:accountNumber" element={<ComplaintDetail />} />
