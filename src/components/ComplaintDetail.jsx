@@ -4,15 +4,19 @@ import { Button } from "@material-tailwind/react";
 
 const ComplaintDetail = () => {
   const { accountNumber } = useParams();
-    const location = useLocation();
-    const isResolvePage = location.pathname.includes("complaint-resolve");
+  const location = useLocation();
+  const isResolvePage = location.pathname.includes("complaint-resolve");
 
   return (
     <CustomCardLayout>
       <div className="flex flex-col gap-2">
-        <h1 className="font-medium text-lg">{isResolvePage ? "Complaints Resolve" : "Complaints: Log"}</h1>
+        <h1 className="font-medium text-lg">
+          {isResolvePage ? "Complaints Resolve" : "Complaints: Log"}
+        </h1>
         <h5 className="text-sm text-[#475467]">
-          View details of logged complaints and log new ones here.
+          {isResolvePage
+            ? "View details of treated complaints and resolve pending ones here."
+            : "View details of logged complaints and log new ones here."}
         </h5>
       </div>
       <div className="h-[1px] w-full bg-[#98A2B3] my-4"></div>
