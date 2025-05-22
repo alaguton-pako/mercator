@@ -16,6 +16,7 @@ function App() {
         <Route path="complaint-log" element={<ComplaintLog />} />
         <Route path="complaint-resolve" element={<ComplaintLog />} />
         <Route path="/complaint-log/:accountNumber" element={<ComplaintDetail />} />
+        <Route path="/complaint-resolve/:accountNumber" element={<ComplaintDetail />} />
       </Route>
 
       {/* Redirect unmatched routes to dashboard */}

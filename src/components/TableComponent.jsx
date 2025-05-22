@@ -2,12 +2,6 @@ import { Icons } from "./Icons";
 import { Button } from "@material-tailwind/react";
 import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import {
-  Dialog,
-  DialogHeader,
-  DialogBody,
-  DialogFooter,
-} from "@material-tailwind/react";
 import FilterComponent from "./FilterComponent";
 
 const TableComponent = ({ complaints = [] }) => {
@@ -16,7 +10,8 @@ const TableComponent = ({ complaints = [] }) => {
   const location = useLocation();
   const isResolvePage = location.pathname.includes("complaint-resolve");
   const handleRowClick = (accountNumber) => {
-    navigate(`/complaint-log/${accountNumber}`);
+    const basePath = isResolvePage ? "complaint-resolve" : "complaint-log";
+    navigate(`/${basePath}/${accountNumber}`);
   };
   const handleOpen = () => setOpen(!open);
   return (
