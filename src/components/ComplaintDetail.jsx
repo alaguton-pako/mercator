@@ -10,7 +10,7 @@ const ComplaintDetail = () => {
   return (
     <CustomCardLayout>
       <div className="flex flex-col gap-2">
-        <h1 className="font-medium text-lg">{isResolvePage ? "Complaint Resolve" : "Complaints: Log"}</h1>
+        <h1 className="font-medium text-lg">{isResolvePage ? "Complaints Resolve" : "Complaints: Log"}</h1>
         <h5 className="text-sm text-[#475467]">
           View details of logged complaints and log new ones here.
         </h5>
