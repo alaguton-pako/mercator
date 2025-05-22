@@ -102,7 +102,7 @@ export function Sidebar() {
           <div className="mr-3">
             <Icons.Home />
           </div>
-          <span className="font-medium text-sm">Dashboard</span>
+          <span className="font-normal text-sm">Dashboard</span>
         </NavLink>
 
         {/* MAIN MENU */}
@@ -123,7 +123,7 @@ export function Sidebar() {
                 }
               >
                 <div className="mr-3">{item.icon}</div>
-                <span className="font-medium text-sm">{item.name}</span>
+                <span className="font-normal text-sm">{item.name}</span>
               </NavLink>
             ))}
             {/* Complaint dropdown parent */}
@@ -137,7 +137,7 @@ export function Sidebar() {
             >
               <div className="flex items-center">
                 <div className="mr-3">{<Icons.File />}</div>
-                <span className="font-medium text-sm">Complaint</span>
+                <span className="font-normal text-sm">Complaint</span>
               </div>
               <span>{showComplaintMenu ? "▲" : "▼"}</span>
             </div>
@@ -191,7 +191,7 @@ export function Sidebar() {
                 }
               >
                 <div className="mr-3">{item.icon}</div>
-                <span className="font-medium text-sm">{item.name}</span>
+                <span className="font-normal text-sm">{item.name}</span>
               </NavLink>
             ))}
           </nav>
