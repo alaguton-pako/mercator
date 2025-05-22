@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const Login = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <NavLink to="/dashboard">
+      <NavLink to="/complaint-log">
         <Button className="cursor-pointer">Go to Dashboard</Button>
       </NavLink>
     </div>
