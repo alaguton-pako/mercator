@@ -1,14 +1,16 @@
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import CustomCardLayout from "./CustomCardLayout";
 import { Button } from "@material-tailwind/react";
 
 const ComplaintDetail = () => {
   const { accountNumber } = useParams();
+    const location = useLocation();
+    const isResolvePage = location.pathname.includes("complaint-resolve");
 
   return (
     <CustomCardLayout>
       <div className="flex flex-col gap-2">
-        <h1 className="font-medium text-lg">Complaints: Log</h1>
+        <h1 className="font-medium text-lg">{isResolvePage ? "Complaint Resolve" : "Complaints: Log"}</h1>
         <h5 className="text-sm text-[#475467]">
           View details of logged complaints and log new ones here.
         </h5>
