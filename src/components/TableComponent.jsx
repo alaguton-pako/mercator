@@ -16,7 +16,7 @@ const TableComponent = ({ complaints = [] }) => {
   const handleOpen = () => setOpen(!open);
   return (
     <>
-      <div className="bg-[#EAECF0] w-full rounded-t-lg px-2 py-2 flex items-center gap-2 justify-between mt-6 border-b-1 border-b-[#D0D5DD]">
+      <div className="bg-[#EAECF0] w-full rounded-t-lg px-2 py-2 flex flex-wrap items-center gap-2 justify-between mt-6 border-b-1 border-b-[#D0D5DD]">
         <div className="flex items-center gap-2 w-[300px] bg-white px-3 py-2 rounded-md">
           <Icons.Search />
           <input
@@ -25,7 +25,7 @@ const TableComponent = ({ complaints = [] }) => {
             className="w-full outline-none bg-transparent text-sm"
           />
         </div>
-        <div className="flex md:gap-4">
+        <div className="flex gap-4">
           <Button className="bg-[#F9FAFB] text-[#1D2939] capitalize flex gap-2 cursor-pointer font-medium text-sm border-[#D0D5DD] py-2 rounded-sm">
             <Icons.Calender />
             Date
@@ -40,68 +40,73 @@ const TableComponent = ({ complaints = [] }) => {
         </div>
       </div>
       <div className="w-full overflow-x-auto rounded-b-lg border border-[#EAECF0]">
-        <table className="min-w-full table-auto border-collapse">
-          <thead>
-            <tr className="border-b border-[#EAECF0]">
-              <th className="text-left px-4 py-3 border-r border-[#EAECF0] capitalize font-medium bg-[#F9FAFB] text-sm text-[#475467]">
-                Account Number
-              </th>
-              <th className="text-center px-4 py-3 border-r border-[#EAECF0] capitalize font-medium bg-[#F9FAFB] text-sm text-[#475467]">
-                Customer Name
-              </th>
-              <th className="text-center px-4 py-3 border-r border-[#EAECF0] capitalize font-medium bg-[#F9FAFB] text-sm text-[#475467]">
-                Submission Date
-              </th>
-              {isResolvePage && (
-                <th className="text-center px-4 py-3 capitalize font-medium bg-[#F9FAFB] text-sm text-[#475467]">
-                  Resolution Date
+        <div className="min-w-[768px]">
+          {" "}
+          <table className="w-full table-auto border-collapse">
+            <thead>
+              <tr className="border-b border-[#EAECF0]">
+                <th className="text-left px-4 py-3 border-r border-[#EAECF0] capitalize font-medium bg-[#F9FAFB] text-sm text-[#475467]">
+                  Account Number
                 </th>
-              )}
-              <th className="text-center px-4 py-3 border-r border-[#EAECF0] capitalize font-medium bg-[#F9FAFB] text-sm text-[#475467]">
-                Category
-              </th>
-            </tr>
-          </thead>
-          <tbody className="text-sm text-[#475467]">
-            {complaints.map((item, index) => (
-              <tr
-                key={index}
-                className="border-b border-[#EAECF0] last:border-b-0 hover:bg-gray-50 hover:cursor-pointer"
-                onClick={() => handleRowClick(item.accountNumber)}
-              >
-                <td className="text-left px-4 py-3 border-r border-[#EAECF0]">
-                  {item.accountNumber}
-                </td>
-                <td className="text-center px-4 py-3 border-r border-[#EAECF0]">
-                  {item.customerName}
-                </td>
-                <td className="text-center px-4 py-3 border-r border-[#EAECF0]">
-                  {item.submissionDate}
-                </td>
+                <th className="text-center px-4 py-3 border-r border-[#EAECF0] capitalize font-medium bg-[#F9FAFB] text-sm text-[#475467]">
+                  Customer Name
+                </th>
+                <th className="text-center px-4 py-3 border-r border-[#EAECF0] capitalize font-medium bg-[#F9FAFB] text-sm text-[#475467]">
+                  Submission Date
+                </th>
                 {isResolvePage && (
-                  <td className="text-center px-4 py-3">
-                    11/14/2024 10:27:43F
-                  </td>
+                  <th className="text-center px-4 py-3 capitalize font-medium bg-[#F9FAFB] text-sm text-[#475467]">
+                    Resolution Date
+                  </th>
                 )}
-                <td className="text-center px-4 py-3 border-r border-[#EAECF0]">
-                  {item.category}
-                </td>
+                <th className="text-center px-4 py-3 border-r border-[#EAECF0] capitalize font-medium bg-[#F9FAFB] text-sm text-[#475467]">
+                  Category
+                </th>
               </tr>
-            ))}
-          </tbody>
-        </table>
-        <div className="w-full flex justify-between items-center py-2 px-6 border-t border-[#EAECF0]">
-          <p className="text-[#344054] text-md">Page 1 of 20</p>
-          <div className="flex items-center gap-2">
-            <Button className="bg-white text-[#344054] capitalize rounded-sm font-medium text-sm border border-[#D0D5DD]">
-              Previous
-            </Button>
-            <Button className="bg-white text-[#344054] capitalize rounded-sm font-medium text-sm border border-[#D0D5DD]">
-              Next
-            </Button>
+            </thead>
+            <tbody className="text-sm text-[#475467]">
+              {complaints.map((item, index) => (
+                <tr
+                  key={index}
+                  className="border-b border-[#EAECF0] last:border-b-0 hover:bg-gray-50 hover:cursor-pointer"
+                  onClick={() => handleRowClick(item.accountNumber)}
+                >
+                  <td className="text-left px-4 py-3 border-r border-[#EAECF0]">
+                    {item.accountNumber}
+                  </td>
+                  <td className="text-center px-4 py-3 border-r border-[#EAECF0]">
+                    {item.customerName}
+                  </td>
+                  <td className="text-center px-4 py-3 border-r border-[#EAECF0]">
+                    {item.submissionDate}
+                  </td>
+                  {isResolvePage && (
+                    <td className="text-center px-4 py-3">
+                      11/14/2024 10:27:43F
+                    </td>
+                  )}
+                  <td className="text-center px-4 py-3 border-r border-[#EAECF0]">
+                    {item.category}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          {/* Pagination */}
+          <div className="w-full flex justify-between items-center py-2 px-6 border-t border-[#EAECF0]">
+            <p className="text-[#344054] text-md">Page 1 of 20</p>
+            <div className="flex items-center gap-2">
+              <Button className="bg-white text-[#344054] capitalize rounded-sm font-medium text-sm border border-[#D0D5DD]">
+                Previous
+              </Button>
+              <Button className="bg-white text-[#344054] capitalize rounded-sm font-medium text-sm border border-[#D0D5DD]">
+                Next
+              </Button>
+            </div>
           </div>
         </div>
       </div>
+
       {open && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/20 backdrop-blur-sm">
           <div className="bg-white w-full max-w-sm max-h-[95vh] overflow-y-auto rounded-lg shadow-lg p-4">

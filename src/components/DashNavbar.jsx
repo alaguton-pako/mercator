@@ -8,7 +8,7 @@ const DashNavbar = () => {
 
   return (
     <>
-      <header className="flex items-center justify-between border-b border-b-[#DEE6E2] px-6 py-2">
+      <header className="sticky top-0 z-20 bg-white flex items-center justify-between border-b border-b-[#DEE6E2] px-6 py-2">
         <div className="flex items-center gap-2">
           <MobileSideBar />
           <div className="flex items-center gap-2">

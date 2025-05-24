@@ -41,7 +41,7 @@ const ComplaintLog = () => {
           </h5>
         </div>
         <div className="h-[1px] w-full bg-[#98A2B3] my-4"></div>
-        <div className="flex justify-between items-center">
+        <div className="flex flex-wrap gap-2 justify-between items-center">
           <div>
             <ButtonGroup className="border-[#f9fafb9a]">
               <Button

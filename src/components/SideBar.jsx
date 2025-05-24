@@ -110,7 +110,7 @@ export function Sidebar() {
         <div className="flex flex-col gap-2">
           <nav className="space-y-2">
             {/* Regular menu items */}
-            {mainNavItems.slice(0,10).map((item) => (
+            {mainNavItems.slice(0, 10).map((item) => (
               <NavLink
                 key={item.name}
                 to={item.href}
@@ -177,7 +177,7 @@ export function Sidebar() {
                 </NavLink>
               </div>
             )}
-              {/* Remaining menu links items */}
+            {/* Remaining menu links items */}
             {mainNavItems.slice(10).map((item) => (
               <NavLink
                 key={item.name}
